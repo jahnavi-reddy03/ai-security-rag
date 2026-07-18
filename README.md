@@ -19,7 +19,7 @@ An AI system that answers cybersecurity questions grounded in real CVE and MITRE
 
 **Tech Stack**: Python | LangChain | ChromaDB | OpenAI | Streamlit | NVD API | MITRE ATT&CK
 
-**Why This Matters**: I'm building toward AI Engineer roles in security, and the thing that kept bothering me was how confidently LLMs get vulnerability details wrong. CVSS scores, affected versions, patch names — models hallucinate all of it. This project is my answer to that: can you actually measure how much RAG reduces those errors? Turns out yes, and the number is 60%.
+**Why This Matters**: I'm building toward AI Engineer roles in security, and the thing that kept bothering me was how confidently LLMs get vulnerability details wrong. CVSS scores, affected versions, patch names models hallucinate all of it. This project is my answer to that: can you actually measure how much RAG reduces those errors? Turns out yes, and the number is 60%.
 
 **Output: Hallucination Evaluation Results**
 Without RAG — Hallucination rate: 100%
