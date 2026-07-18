@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "without_rag_hallucination_rate": "100%",
+    "with_rag_hallucination_rate": "40%",
+    "hallucination_reduction": "60%",
+    "total_questions": 5
+  },
+  "methodology": "CVSS score accuracy test \u2014 exact score must appear in answer",
+  "results": [
+    {
+      "cve_id": "CVE-2023-20198",
+      "correct_cvss": "10.0",
+      "without_rag_verdict": "HALLUCINATION",
+      "with_rag_verdict": "ACCURATE"
+    },
+    {
+      "cve_id": "CVE-2023-22515",
+      "correct_cvss": "10.0",
+      "without_rag_verdict": "HALLUCINATION",
+      "with_rag_verdict": "ACCURATE"
+    },
+    {
+      "cve_id": "CVE-2024-3400",
+      "correct_cvss": "10.0",
+      "without_rag_verdict": "HALLUCINATION",
+      "with_rag_verdict": "HALLUCINATION"
+    },
+    {
+      "cve_id": "CVE-2023-44487",
+      "correct_cvss": "7.5",
+      "without_rag_verdict": "HALLUCINATION",
+      "with_rag_verdict": "ACCURATE"
+    },
+    {
+      "cve_id": "CVE-2023-23397",
+      "correct_cvss": "9.8",
+      "without_rag_verdict": "HALLUCINATION",
+      "with_rag_verdict": "HALLUCINATION"
+    }
+  ]
+}
