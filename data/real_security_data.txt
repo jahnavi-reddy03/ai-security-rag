@@ -1,0 +1,259 @@
+=== SECURITY THREAT INTELLIGENCE DATABASE ===
+
+CVE ID: CVE-2023-20198
+CVSS v3 Score: 10.0
+CVSS Severity: CRITICAL
+Affected Products: Cisco IOS XE Web UI
+Description: Cisco IOS XE Software Web UI privilege escalation vulnerability allowing unauthenticated remote attacker to create an account with privilege level 15 access. Actively exploited in the wild.
+
+CVE ID: CVE-2023-22515
+CVSS v3 Score: 10.0
+CVSS Severity: CRITICAL
+Affected Products: Atlassian Confluence Data Center and Server
+Description: Broken access control vulnerability in Atlassian Confluence allowing unauthenticated attacker to create unauthorized Confluence administrator accounts and access Confluence instances.
+
+CVE ID: CVE-2024-3400
+CVSS v3 Score: 10.0
+CVSS Severity: CRITICAL
+Affected Products: Palo Alto Networks PAN-OS GlobalProtect
+Description: OS command injection vulnerability in Palo Alto Networks PAN-OS GlobalProtect feature allowing unauthenticated attacker to execute arbitrary code with root privileges on the firewall.
+
+CVE ID: CVE-2023-44487
+CVSS v3 Score: 7.5
+CVSS Severity: HIGH
+Affected Products: HTTP/2 protocol implementations (nginx, Apache, Tomcat)
+Description: HTTP/2 Rapid Reset Attack enabling distributed denial of service by exploiting stream cancellation feature. Caused record-breaking DDoS attacks exceeding 398 million requests per second.
+
+CVE ID: CVE-2023-23397
+CVSS v3 Score: 9.8
+CVSS Severity: CRITICAL
+Affected Products: Microsoft Outlook for Windows
+Description: Microsoft Outlook privilege escalation zero-click vulnerability. Attacker sends specially crafted email causing victim's NTLM hash to be sent to attacker-controlled server without any user interaction.
+
+CVE ID: CVE-2023-4863
+CVSS v3 Score: 8.8
+CVSS Severity: HIGH
+Affected Products: Google Chrome, Mozilla Firefox, Microsoft Edge, libwebp
+Description: Heap buffer overflow in WebP codec library (libwebp) allowing remote attacker to perform out-of-bounds memory write via crafted HTML page. Exploited in the wild as zero-day.
+
+CVE ID: CVE-2024-21762
+CVSS v3 Score: 9.6
+CVSS Severity: CRITICAL
+Affected Products: Fortinet FortiOS SSL VPN
+Description: Out-of-bounds write vulnerability in Fortinet FortiOS allowing unauthenticated remote code execution via specially crafted HTTP requests. Actively exploited against government and enterprise targets.
+
+CVE ID: CVE-2023-38831
+CVSS v3 Score: 7.8
+CVSS Severity: HIGH
+Affected Products: RARLAB WinRAR before version 6.23
+Description: WinRAR spoofing vulnerability allowing attacker to execute arbitrary code when victim opens a crafted ZIP archive. Exploited by multiple APT groups to deliver malware via phishing campaigns.
+
+
+=== MITRE ATT&CK TECHNIQUES ===
+
+MITRE Technique: T1055.011 - Extra Window Memory Injection
+Tactic: stealth
+Description: Adversaries may inject malicious code into process via Extra Window Memory (EWM) in order to evade process-based defenses as well as possibly elevate privileges. EWM injection is a method of executing
+
+MITRE Technique: T1053.005 - Scheduled Task
+Tactic: execution
+Description: Adversaries may abuse the Windows Task Scheduler to perform task scheduling for initial or recurring execution of malicious code. There are multiple ways to access the Task Scheduler in Windows. The [
+
+MITRE Technique: T1205.002 - Socket Filters
+Tactic: stealth
+Description: Adversaries may attach filters to a network socket to monitor then activate backdoors used for persistence or command and control. With elevated permissions, adversaries can use features such as the `
+
+MITRE Technique: T1560.001 - Archive via Utility
+Tactic: collection
+Description: Adversaries may use utilities to compress and/or encrypt collected data prior to exfiltration. Many utilities include functionalities to compress, encrypt, or otherwise package data into a format that
+
+MITRE Technique: T1021.005 - VNC
+Tactic: lateral-movement
+Description: Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to remotely control machines using Virtual Network Computing (VNC).  VNC is a platform-independent desktop sharing syste
+
+MITRE Technique: T1047 - Windows Management Instrumentation
+Tactic: execution
+Description: Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads. WMI is designed for programmers and is the infrastructure for management data and operations 
+
+MITRE Technique: T1687 - Exploitation for Defense Impairment
+Tactic: defense-impairment
+Description: Adversaries may exploit vulnerabilities in security software, infrastructure, or defensive components to degrade, disable, or otherwise continue to impair their ability to prevent, detect, or respond 
+
+MITRE Technique: T1113 - Screen Capture
+Tactic: collection
+Description: Adversaries may attempt to take screen captures of the desktop to gather information over the course of an operation. Screen capturing functionality may be included as a feature of a remote access too
+
+MITRE Technique: T1027.011 - Fileless Storage
+Tactic: stealth
+Description: Adversaries may store data in "fileless" formats to conceal malicious activity from defenses. Fileless storage can be broadly defined as any format other than a file. Common examples of non-volatile f
+
+MITRE Technique: T1037 - Boot or Logon Initialization Scripts
+Tactic: persistence
+Description: Adversaries may use scripts automatically executed at boot or logon initialization to establish persistence.(Citation: Mandiant APT29 Eye Spy Email Nov 22)(Citation: Anomali Rocke March 2019) Initiali
+
+MITRE Technique: T1557 - Adversary-in-the-Middle
+Tactic: credential-access
+Description: Adversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as [Network Sniffing](https:/
+
+MITRE Technique: T1033 - System Owner/User Discovery
+Tactic: discovery
+Description: Adversaries may attempt to identify the primary user, currently logged in user, set of users that commonly uses a system, or whether a user is actively using the system. They may do this, for example,
+
+MITRE Technique: T1583 - Acquire Infrastructure
+Tactic: resource-development
+Description: Adversaries may buy, lease, rent, or obtain infrastructure that can be used during targeting. A wide variety of infrastructure exists for hosting and orchestrating adversary operations. Infrastructure
+
+MITRE Technique: T1218.011 - Rundll32
+Tactic: stealth
+Description: Adversaries may abuse rundll32.exe to proxy execution of malicious code. Using rundll32.exe, vice executing directly (i.e. [Shared Modules](https://attack.mitre.org/techniques/T1129)), may avoid trigg
+
+MITRE Technique: T1613 - Container and Resource Discovery
+Tactic: discovery
+Description: Adversaries may attempt to discover containers and other resources that are available within a containers environment. Other resources may include images, deployments, pods, nodes, and other informati
+
+MITRE Technique: T1583.007 - Serverless
+Tactic: resource-development
+Description: Adversaries may purchase and configure serverless cloud infrastructure, such as Cloudflare Workers, AWS Lambda functions, or Google Apps Scripts, that can be used during targeting. By utilizing server
+
+MITRE Technique: T1132.001 - Standard Encoding
+Tactic: command-and-control
+Description: Adversaries may encode data with a standard data encoding system to make the content of command and control traffic more difficult to detect. Command and control (C2) information can be encoded using 
+
+MITRE Technique: T1027.009 - Embedded Payloads
+Tactic: stealth
+Description: Adversaries may embed payloads within other files to conceal malicious content from defenses. Otherwise seemingly benign files (such as scripts and executables) may be abused to carry and obfuscate ma
+
+MITRE Technique: T1556.003 - Pluggable Authentication Modules
+Tactic: defense-impairment
+Description: Adversaries may modify pluggable authentication modules (PAM) to access user credentials or enable otherwise unwarranted access to accounts. PAM is a modular system of configuration files, libraries, 
+
+MITRE Technique: T1578.004 - Revert Cloud Instance
+Tactic: defense-impairment
+Description: An adversary may revert changes made to a cloud instance after they have performed malicious activities in attempt to evade detection and remove evidence of their presence. In highly virtualized envir
+
+MITRE Technique: T1592 - Gather Victim Host Information
+Tactic: reconnaissance
+Description: Adversaries may gather information about the victim's hosts that can be used during targeting. Information about hosts may include a variety of details, including administrative data (ex: name, assign
+
+MITRE Technique: T1596.003 - Digital Certificates
+Tactic: reconnaissance
+Description: Adversaries may search public digital certificate data for information about victims that can be used during targeting. Digital certificates are issued by a certificate authority (CA) in order to cryp
+
+MITRE Technique: T1056.001 - Keylogging
+Tactic: collection
+Description: Adversaries may log user keystrokes to intercept credentials as the user types them. Keylogging is likely to be used to acquire credentials for new access opportunities when [OS Credential Dumping](ht
+
+MITRE Technique: T1564.012 - File/Path Exclusions
+Tactic: stealth
+Description: Adversaries may attempt to hide their file-based artifacts by writing them to specific folders or file names excluded from antivirus (AV) scanning and other defensive capabilities. AV and other file-b
+
+MITRE Technique: T1222.002 - Linux and Mac Permissions
+Tactic: defense-impairment
+Description: Adversaries may modify file or directory permissions/attributes to evade access control lists (ACLs) and access protected files.(Citation: Hybrid Analysis Icacls1 June 2018)(Citation: Hybrid Analysis 
+
+MITRE Technique: T1110.001 - Password Guessing
+Tactic: credential-access
+Description: Adversaries with no prior knowledge of legitimate credentials within the system or environment may guess passwords to attempt access to accounts. Without knowledge of the password for an account, an a
+
+MITRE Technique: T1216.001 - PubPrn
+Tactic: stealth
+Description: Adversaries may use PubPrn to proxy execution of malicious remote files. PubPrn.vbs is a [Visual Basic](https://attack.mitre.org/techniques/T1059/005) script that publishes a printer to Active Directo
+
+MITRE Technique: T1597.002 - Purchase Technical Data
+Tactic: reconnaissance
+Description: Adversaries may purchase technical information about victims that can be used during targeting. Information about victims may be available for purchase within reputable private sources and databases, 
+
+MITRE Technique: T1003 - OS Credential Dumping
+Tactic: credential-access
+Description: Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Credentials can be obtained from OS caches, memory
+
+MITRE Technique: T1129 - Shared Modules
+Tactic: execution
+Description: Adversaries may execute malicious payloads via loading shared modules. Shared modules are executable files that are loaded into processes to provide access to reusable code, such as specific custom fu
+
+MITRE Technique: T1602 - Data from Configuration Repository
+Tactic: collection
+Description: Adversaries may collect data related to managed devices from configuration repositories. Configuration repositories are used by management systems in order to configure, manage, and control data on re
+
+MITRE Technique: T1561.002 - Disk Structure Wipe
+Tactic: impact
+Description: Adversaries may corrupt or wipe the disk data structures on a hard drive necessary to boot a system; targeting specific critical systems or in large numbers in a network to interrupt availability to s
+
+MITRE Technique: T1498.001 - Direct Network Flood
+Tactic: impact
+Description: Adversaries may attempt to cause a denial of service (DoS) by directly sending a high-volume of network traffic to a target. This DoS attack may also reduce the availability and functionality of the t
+
+MITRE Technique: T1574.007 - Path Interception by PATH Environment Variable
+Tactic: stealth
+Description: Adversaries may execute their own malicious payloads by hijacking environment variables used to load libraries. The PATH environment variable contains a list of directories (User and System) that the 
+
+MITRE Technique: T1213.002 - Sharepoint
+Tactic: collection
+Description: Adversaries may leverage the SharePoint repository as a source to mine valuable information. SharePoint will often contain useful information for an adversary to learn about the structure and function
+
+MITRE Technique: T1006 - Direct Volume Access
+Tactic: stealth
+Description: Adversaries may directly access a volume to bypass file access controls and file system monitoring. Windows allows programs to have direct access to logical volumes. Programs with direct access may re
+
+MITRE Technique: T1588.007 - Artificial Intelligence
+Tactic: resource-development
+Description: Adversaries may obtain access to generative artificial intelligence tools, such as large language models (LLMs), to aid various techniques during targeting. These tools may be used to inform, bolster,
+
+MITRE Technique: T1666 - Modify Cloud Resource Hierarchy
+Tactic: defense-impairment
+Description: Adversaries may attempt to modify hierarchical structures in infrastructure-as-a-service (IaaS) environments in order to evade defenses.  
+
+IaaS environments often group resources into a hierarchy, en
+
+MITRE Technique: T1564.008 - Email Hiding Rules
+Tactic: stealth
+Description: Adversaries may use email rules to hide inbound emails in a compromised user's mailbox. Many email clients allow users to create inbox rules for various email functions, including moving emails to oth
+
+MITRE Technique: T1491.002 - External Defacement
+Tactic: impact
+Description: An adversary may deface systems external to an organization in an attempt to deliver messaging, intimidate, or otherwise mislead an organization or users. [External Defacement](https://attack.mitre.or
+
+MITRE Technique: T1027.013 - Encrypted/Encoded File
+Tactic: stealth
+Description: Adversaries may encrypt or encode files to obfuscate strings, bytes, and other specific patterns to impede detection. Encrypting and/or encoding file content aims to conceal malicious artifacts within
+
+MITRE Technique: T1590.005 - IP Addresses
+Tactic: reconnaissance
+Description: Adversaries may gather the victim's IP addresses that can be used during targeting. Public IP addresses may be allocated to organizations by block, or a range of sequential addresses. Information abou
+
+MITRE Technique: T1499.001 - OS Exhaustion Flood
+Tactic: impact
+Description: Adversaries may launch a denial of service (DoS) attack targeting an endpoint's operating system (OS). A system's OS is responsible for managing the finite resources as well as preventing the entire s
+
+MITRE Technique: T1014 - Rootkit
+Tactic: stealth
+Description: Adversaries may use rootkits to hide the presence of programs, files, network connections, services, drivers, and other system components. Rootkits are programs that hide the existence of malware by i
+
+MITRE Technique: T1546.013 - PowerShell Profile
+Tactic: privilege-escalation
+Description: Adversaries may gain persistence and elevate privileges by executing malicious content triggered by PowerShell profiles. A PowerShell profile  (<code>profile.ps1</code>) is a script that runs when [Po
+
+MITRE Technique: T1059.007 - JavaScript
+Tactic: execution
+Description: Adversaries may abuse various implementations of JavaScript for execution. JavaScript (JS) is a platform-independent scripting language (compiled just-in-time at runtime) commonly associated with scri
+
+MITRE Technique: T1685.003 - Modify or Spoof Tool UI
+Tactic: defense-impairment
+Description: Adversaries may spoof or manipulate security tool user interfaces (UIs) to falsely indicate tools are functioning normally and delay detection and response. 
+
+Adversaries may present misleading or fal
+
+MITRE Technique: T1590.002 - DNS
+Tactic: reconnaissance
+Description: Adversaries may gather information about the victim's DNS that can be used during targeting. DNS information may include a variety of details, including registered name servers as well as records that
+
+MITRE Technique: T1485.001 - Lifecycle-Triggered Deletion
+Tactic: impact
+Description: Adversaries may modify the lifecycle policies of a cloud storage bucket to destroy all objects stored within.  
+
+Cloud storage buckets often allow users to set lifecycle policies to automate the migra
+
+MITRE Technique: T1123 - Audio Capture
+Tactic: collection
+Description: An adversary can leverage a computer's peripheral devices (e.g., microphones and webcams) or applications (e.g., voice and video call services) to capture audio recordings for the purpose of listening
+
